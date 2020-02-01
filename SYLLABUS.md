@@ -112,6 +112,7 @@ I highly recommend you do the following:
 - Class beings at 6:30 pm on Tuesday and Thursday, and 10:00 am on Saturday.
     - It is STRONGLY encouraged that late attendance be kept to a minimum. Class immediately begins at the stated time. 
     - Students are responsible for marking their own attendance in bootcampspot. Failure to do so may be counted as an absence. 
+    - It is important to pull the class repo before class starts!
 - Class consists of a combination of the following: 
     - Lecture on technical concepts
     - Demonstration of concepts, practical coding, and technology. 

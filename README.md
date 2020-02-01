@@ -42,8 +42,8 @@ You must give a full effort on every group and individual project. Effort is an 
 ## Important Links And Notes
 
 
-### [Syllabus]()
-
+### [Syllabus](SYLLABUS.md)
+### [Resources](RESOURCES.md)
 ### Locations:
 
 Tues/Thursday: Annex
