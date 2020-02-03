@@ -41,9 +41,12 @@ You must give a full effort on every group and individual project. Effort is an 
 
 ## Important Links And Notes
 
-
 ### [Syllabus](SYLLABUS.md)
+The class syllabus. Please read and review.
 ### [Resources](RESOURCES.md)
+Extra resources, and help if you need it!
+### [Quickstart](QUICKSTART.md)
+How to set up a computer for class.
 ### Locations:
 
 Tues/Thursday: Annex
@@ -52,7 +55,7 @@ Saturday: Arid Lands
 
 -----------------------------------------
 
-[Slack Room]()
+[Slack Room](https://uofatucfsfpt0-etr7802.slack.com/)
 
 -----------------------------------------
 

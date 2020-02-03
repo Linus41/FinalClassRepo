@@ -20,6 +20,7 @@ Google Chrome is the recommended web browser for the class, and in-general devel
 Git is the most common source control in the industry, and a fundamental skill. It can be installed [here.](https://git-scm.com/) 
 
 The important check boxes are: 
+
 ![Git Settings](/docs/images/git.png)
 
 The important part is the Windows Explorer integration! This will allow for you to open up Git Bash in Explorer, which is very important. 
