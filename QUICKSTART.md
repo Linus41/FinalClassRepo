@@ -13,9 +13,16 @@
 
 ### Google Chrome
 
-Google Chrome is the recommended web browser for the class, and in-general development. It can be don
+Google Chrome is the recommended web browser for the class, and in-general development. It can be downloaded [here.](https://www.google.com/chrome/)
 
 ### Git 
+
+Git is the most common source control in the industry, and a fundamental skill. It can be installed [here.](https://git-scm.com/) 
+
+The important check boxes are: 
+![Git Settings](/docs/images/git.png)
+
+The important part is the Windows Explorer integration! This will allow for you to open up Git Bash in Explorer, which is very important. 
 
 ### IDE
 
@@ -26,8 +33,6 @@ Should you wish to, you are free to use other editors such as IDEA or Sublime. H
 You will want to set your settings up as such: 
 
 ![VS Code Settings](/docs/images/vscode.png)
-
-
 
 ### Node.js
 
@@ -43,7 +48,27 @@ Make sure that the 'Add to Path' is enabled. It should be the same icon as the a
 
 Next, select automatically install necessary tools on the next screen. Then install Node.js!
 
-### 
+### MongoDB
 
+### MySQL 
+
+### Heroku
+
+
+### Final Configuration
+
+##### Integrating Git Bash for VS Code
+
+This is very important! Powershell, the default console on Windows 10 devices, is not ideal for development. The vast majority of jobs and such will use linux-style commands, such as Git Bash. Thus, we want VS Code to use Git Bash!
+
+Open up VS Code's Settings, and type in: 'windows exec' as shown below
+
+![VS Code Settings](/docs/images/vscodesettings.png)
+
+The, we need to change that default terminal to the Git Bash .exe location, usually: 
+
+C:\Program Files\Git\bin\bash.exe
+
+Test this by opening the Terminal, it should look like the Git Bash window. If you got command prompt, restart VS Code and try again.
 
 
