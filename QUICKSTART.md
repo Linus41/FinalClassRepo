@@ -15,6 +15,7 @@
 
 Google Chrome is the recommended web browser for the class, and in-general development. It can be don
 
+### Git 
 
 ### IDE
 
