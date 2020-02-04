@@ -62,13 +62,23 @@ Next, select automatically install necessary tools on the next screen. Then inst
 
 This is very important! Powershell, the default console on Windows 10 devices, is not ideal for development. The vast majority of jobs and such will use linux-style commands, such as Git Bash. Thus, we want VS Code to use Git Bash!
 
-Open up VS Code's Settings, and type in: 'windows exec' as shown below
+Open up VS Code's Settings by clicking on the gear icon in the lower left corner of the screen, and then selecting settings. 
 
-![VS Code Settings](/docs/images/vscodesettings.png)
+![VS Code Settings](/docs/images/settingssteps.png)
 
-The, we need to change that default terminal to the Git Bash .exe location, usually: 
+This will open up the following screen: 
+
+![VS Code Settings](/docs/images/settingsscreen.png)
+
+Into that search bar, type in: 'windows exec' as shown below
+
+![VS Code Settings](/docs/images/vscodesearchsettings.png)
+
+The 2 there highlights the field we need to change, the 'Terminal > External: Windows Exec' setting. We need to change that default terminal to the Git Bash .exe location, usually: 
 
 C:\Program Files\Git\bin\bash.exe
+
+![VS Code Settings](/docs/images/finalsettings.png)
 
 Test this by opening the Terminal, it should look like the Git Bash window. If you got command prompt, restart VS Code and try again.
 
