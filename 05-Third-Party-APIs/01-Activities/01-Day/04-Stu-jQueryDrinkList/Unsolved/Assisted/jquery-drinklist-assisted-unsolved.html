@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Content!</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+  <h1>Drink Selection!</h1>
+  <hr>
+
+  <!-- Here we have created a generic drink-options div -->
+  <div id="drink-options"></div>
+
+  <script type="text/javascript">
+
+    // Array holds all of the drinks available
+    var drinkList = [
+      "Coffee: $5",
+      "Espresso: $7",
+      "Cappuccino: $6",
+      "Latte: $4",
+      "Tea: $3",
+      "Ice Coffee: $6",
+      "Ice Espresso: $8",
+      "Ice Latte: $6",
+      "Ice Tea: $4"
+    ];
+
+    // 1. Use jQuery to select the div with the id drink-options
+    // HINT: How do we select by id in jQuery? If $(".light") grabbed the light class
+    var drinkDiv = $("#drink-options");
+
+    // 2. For Loop through each item in the drink list
+    for (var i = 0; i < drinkList.length; i++) {
+
+      // 3. Use jQuery to create an element AND add text to that element
+      
+      // 4. Append that new element to the drink-options!
+    }
+
+  </script>
+
+</body>
+</html>
