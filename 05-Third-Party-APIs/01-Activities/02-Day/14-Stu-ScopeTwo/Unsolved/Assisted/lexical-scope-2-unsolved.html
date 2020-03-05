@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closure</title>
+</head>
+<body>
+  <h2>Check console to see the madness!</h2>
+
+  <script>
+    // 1. This here is an object!
+    var cat = {
+      name: "Gus",
+      color: "gray",
+      age: 15,
+
+      // 2. printInfo is a function within an object, or a 'method'
+      printInfo: function() {
+        console.log("inside printInfo()");
+
+        // 3. So, if printInfo belongs to cat, what will this print?
+        console.log(this);
+
+        // 4. Then, if this printed out something above in question three, what will this print?
+        console.log("Name:", this.name, "Color:", this.color, "Age:", this.age);
+
+        var nestedFunction = function() {
+          console.log("inside nestedFunction()");
+
+          // 5. Now, what will this 'this' print?
+          console.log(this);
+
+          // 6. Given the above, this will now print out what, and why?
+          console.log("Name:", this.name, "Color:", this.color, "Age:", this.age);
+        };
+
+        nestedFunction();
+      }
+    };
+
+    // calls the printInfo function. Which subsequently calls the nestedFunction()
+    cat.printInfo();
+
+</script>
+
+</body>
+</html>

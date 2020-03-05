@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fridge Magnets</title>
+</head>
+
+<!-- CSS Styles (These styles are provided to you. Don't touch these!) -->
+<style>
+  body {
+    background: url(assets/fridge.png) no-repeat;
+  }
+
+  .letter {
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    padding: 2px;
+    float: left;
+    margin: 2px;
+  }
+
+  .letter-button-color {
+    color: darkcyan;
+  }
+
+  .fridge-color {
+    color: orange;
+  }
+
+  #display {
+    margin-top: 78px;
+    height: 500px;
+    width: 220px;
+    margin-left: 60px;
+  }
+
+  #buttons {
+    padding-top: 60px;
+  }
+
+  #clear {
+    margin-left: 20px;
+    font-size: 25px;
+    color: black;
+    border-style: solid;
+    width: 100px;
+  }
+</style>
+
+<body>
+  <div id="display"></div>
+  <div id="buttons"></div>
+  <button id="clear">clear</button>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      // Here we are provided an initial array of letters.
+      // Use this array to dynamically create buttons on the screen.
+      var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
+
+
+      // MAJOR TASK #1: DYNAMICALLY CREATE BUTTONS
+      // =================================================================================
+
+      // 1. Create a for-loop to iterate through the letters array.
+
+      // Inside the loop...
+
+      // 2. Inside the loop, create a letterBtn with the following classes, 'letter-button', 'letter', and 'letter-button-color', 
+      // then set the text to it's respective value in the array. Then append it to the buttons div
+
+      // Be sure to test that your code works for this major task, before proceeding to the next one!
+
+      // MAJOR TASK #2: ATTACH ON-CLICK EVENTS TO "LETTER" BUTTONS
+      // =================================================================================
+
+      // 3. Create an "on-click" event attached to the ".letter-button" class.
+
+      // 4. Inside the on-click event give each "fridgeMagnet" the following classes: "letter fridge-color", 
+      // then chain the following code onto the "fridgeMagnet" variable: .text($(this).attr("data-letter"))
+      // and then append it to #display
+
+      // MAJOR TASK #3: ATTACH ON-CLICK EVENTS TO "CLEAR" BUTTON
+      // =================================================================================
+
+      // 5. Create an "on-click" event attached to the "#clear" button id.
+
+      // 6. Inside the on-click event use the jQuery "empty()" method to clear the contents of the "#display" div.
+
+    });
+  </script>
+</body>
+
+</html>
