@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Giphy API</title>
+</head>
+
+<body>
+  <div id="team">
+    <div id="pokemon_1"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // Example queryURL for PokeAPI
+    // Notice the LACK of api key!!!
+    var queryURL = "https://pokeapi.co/api/v2/pokemon/" + pokemon;
+    pokemon = "garchomp"
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      var frontSprite = $("<img>")
+      frontSprite.attr("src", response.sprites.front_default);
+
+      var name = $("<strong>")
+      name.text(response.name);
+      
+
+      // Generating a whole table!
+      var moves = $("<table>")
+      
+      var headerRow = $("<td>")
+      
+      var moveHeader = $("<th>");
+      moveHeader.text("Move");
+      var learnedHeader = $("<th>");
+      learnedHeader.text("Learned At");
+      headerRow.append(moveHeader, learnedHeader);
+      moves.append(headerRow);
+
+      for(var i = 0; i < response.moves.length; i++){
+        var move = $("<tr>");
+        var moveName = $("<td>");
+        moveName.text(response.moves[i].move.name);
+        move.append(moveName);
+        var moveLevel = $("<td>");
+        if(response.moves[i].version_group_details[response.moves[i].version_group_details.length -1].level_learned_at == 0){
+          moveLevel.text("Egg or TM move")
+        }
+        else{
+          moveLevel.text(response.moves[i].version_group_details[response.moves[i].version_group_details.length -1].level_learned_at)
+        }
+
+        move.append(moveLevel);
+        moves.append(move)
+      }
+
+
+
+      $("#pokemon_1").append(frontSprite)
+      $("#pokemon_1").append(name)
+      $("#pokemon_1").append(moves)
+    });
+  </script>
+
+</body>
+
+</html>
