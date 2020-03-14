@@ -30,6 +30,8 @@
       <input id="add-movie" type="submit" value="Add a Movie, Yo!">
     </form>
 
+    <div id="movies"></div> 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
       // Initial array of movies
@@ -39,7 +41,25 @@
       function displayMovieInfo() {
 
         // YOUR CODE GOES HERE!!! HINT: You will need to create a new div to hold the JSON.
+        var movie = $(this).attr("data-name")
+        var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
 
+        // 8. Write code between the dashes below to hit the queryURL with $ajax, then take the response data
+        // and display it in the div with an id of movie-view
+
+        // YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE
+
+        // =================================================================
+        // CODE GOES HERE
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function (response) {
+          console.log(response);
+          $("#movies").text(JSON.stringify(response));
+        })
+
+        // Response -> Write out that json
       }
 
       // Function for displaying movie data
@@ -67,7 +87,7 @@
       }
 
       // This function handles events where one button is clicked
-      $("#add-movie").on("click", function(event) {
+      $("#add-movie").on("click", function (event) {
         event.preventDefault();
 
         // This line grabs the input from the textbox

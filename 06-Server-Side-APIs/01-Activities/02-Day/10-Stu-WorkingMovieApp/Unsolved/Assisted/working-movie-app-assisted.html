@@ -48,13 +48,20 @@
         $.ajax({
           url: queryURL,
           method: "GET"
-        }).then(function (response) {
-
+        }).then(function (res) {
+          console.log(res)
           // 1. Creates a div to hold the movie
+          var div = $("<div>");
 
+          var title = $("<p>");
+          title.text(res.Title);
+          div.append(title);
           //  2. Creates an element to have the rating displayed
           // Retrieves the data from the object 'response', and set it to the element above
           // Append the rating element to the movie div in 1
+            var rating = $("<p>");
+              rating.text(res.Rated);
+              div.append(rating)
 
           //  2. Creates an element to have the release displayed
           // Retrieves the data from the object 'response', and set it to the element above
@@ -63,10 +70,18 @@
           //  3. Creates an element to have the plot displayed
           // Retrieves the data from the object 'response', and set it to the element above
           // Append the plot element to the movie div in 1
+          var plot = $("<p>");
+              plot.text(res.Plot);
+              div.append(plot)
+
 
           // X. Now repeat the above for image!
+            var image = $("<img>");
+            image.attr("src", res.Poster)
+            div.append(image);
 
           // 5. Append the entire movie div!
+          $("#movies-view").prepend(div);
         });
 
       }

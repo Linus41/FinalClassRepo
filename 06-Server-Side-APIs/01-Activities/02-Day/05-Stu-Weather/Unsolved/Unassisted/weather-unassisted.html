@@ -14,9 +14,27 @@
   <div class="temp"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
+    // This is our API key
+    var APIKey = "166a433c57516f51dfab1f7edaed8413";
+
+    // Here we are building the URL we need to query the database
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=Tucson,Arizona&appid=" + APIKey;
+
+
     // Things to accomplish:
     // Get an API Key from OpenWeatherMap API
+
     // Create an AJAX call to retrieve data Log the data in console
+    $.ajax({
+      method: "GET",
+      url: queryURL
+    }).then(function (response) {
+      console.log(response)
+      $(".city").text(response.name)
+    $(".wind").text(response.speed + " MPH");
+
+    })
+
     // Log the data in HTML
   </script>
 

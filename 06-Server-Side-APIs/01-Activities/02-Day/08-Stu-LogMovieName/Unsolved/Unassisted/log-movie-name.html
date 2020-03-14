@@ -29,7 +29,7 @@
       <!-- Button triggers new movie to be added -->
       <input id="add-movie" type="submit" value="Add a Movie, Yo!">
     </form>
-
+ <div id="movies"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
       // Initial array of movies
@@ -38,8 +38,10 @@
       // Generic function for capturing the movie name from the data-attribute
       function alertMovieName() {
 
+        var button = $(this).attr("data-name")
+        console.log(button)
         // YOUR CODE GOES HERE!!!
-
+        $("#movies").append(button)
       }
 
       // Function for displaying movie data

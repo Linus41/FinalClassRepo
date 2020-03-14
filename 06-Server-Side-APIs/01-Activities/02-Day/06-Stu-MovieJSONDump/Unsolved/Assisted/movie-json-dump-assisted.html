@@ -45,7 +45,13 @@
 
         // =================================================================
         // CODE GOES HERE
-
+        $.ajax({
+          url: queryURL, 
+          method: "GET"
+        }).then(function(response){
+          console.log(response);
+          $("#movie-view").text(JSON.stringify(response));
+        })
         // 9. So we need to start our code here; the most important part is done, we have our queryURL! We 
         // just need to write an ajax call against it, and do something with the data coming back.
 
