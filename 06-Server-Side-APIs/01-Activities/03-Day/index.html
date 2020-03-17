@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Day Planner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Rendered planner here  -->
+        <div class="row">
+            <h1>Replace with day of week and date</h1>
+            <div class="row" id="enterEv">
+                Enter Event: <input type="text" id="event"><br>
+                <button id="submit">Submit</button>
+            </div>
+            <div id="planner-view" class="col"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $("#enterEv").hide();
+        $(document).ready(function () {
+            // declare and define each hour in day
+            var timeBlocks = ["9:00", "10:00", "11:00", "12:00", "1:00", "2:00", "3:00", "4:00", "5:00"];
+            // Commenting this out; we can do it in the f
+            //var eventStorage =localStorage.getItem("event");
+
+            // Display the planner
+            // Loop through timeblocks and create a button for each
+            for (var i = 0; i < timeBlocks.length; i++) {
+                //CHANGED THIS
+                //Wrapped it in a div so we can add stuff easier
+                var timeBucket = $("<div>");
+                var timeSlot = $("<button>");
+                console.log(timeBlocks[i]);
+                timeSlot.addClass("time-slot");
+                timeSlot.attr("data-name", timeBlocks[i]);
+                timeSlot.text(timeBlocks[i]);
+                
+                //CHANGED THIS
+                timeBucket.append(timeSlot);
+
+                //ADDED THIS
+                var timeText = $("<p>");
+                timeText.text(localStorage.getItem(timeBlocks[i]))
+                timeBucket.append(timeText)
+                
+                $("#planner-view").append(timeBucket);
+            }
+
+            $(".time-slot").on("click", function () {
+                console.log("I've been clicked");
+                console.log($(this).attr("data-name"));
+
+                // ADDED THIS BASED ON console.log above
+                var time = $(this).attr("data-name")
+                $("#enterEv").show();
+                $("#submit").on("click", function (event) {
+                    var inputEvent = $("input:text").val()
+                    console.log(inputEvent);
+                    //CHANGED THIS
+                    // Into localstorage, set in bucket 'data-name', aka the time, the inputEvent
+                    localStorage.setItem(time, inputEvent);
+                })
+            })  
+            //displayPlanner();
+        })
+    </script>
+</body>
+
+</html>
