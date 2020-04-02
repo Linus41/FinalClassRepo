@@ -5,9 +5,13 @@ In this activity, you will build a simple command line application that accepts 
 
 ## Instructions
 
-* Initialize your repository and install the `inquirer` dependency.
+* Create an npm project using `npm init`
 
-    * Is there another dependency you will need? 
+* Install the `inquirer` dependency using `npm install inquirer`.
+
+* Create an `index.js`
+
+* Inquirer docs are on `npmjs.com`!
 
 * Prompt your user with the following questions:
 
