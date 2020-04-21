@@ -1,0 +1,16 @@
+{
+  "name": "ice-cream-crud-advanced",
+  "version": "1.0.0",
+  "description": "",
+  "main": "iceCreamAdvanced.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node iceCreamCRUDAdvanced.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^7.1.0",
+    "mysql": "^2.16.0"
+  }
+}
