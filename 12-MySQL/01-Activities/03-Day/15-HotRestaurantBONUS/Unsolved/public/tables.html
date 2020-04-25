@@ -24,9 +24,11 @@
       <br>
 
       <div class="text-center">
-        <a href="/reserve"><button class="btn btn-lg btn-danger"><span class="fa fa-credit-card"></span> Make Reservation</button></a>
+        <a href="/reserve"><button class="btn btn-lg btn-danger"><span class="fa fa-credit-card"></span> Make
+            Reservation</button></a>
         <a href="/"><button class="btn btn-lg btn-default"><span class="fa fa-home"></span></button></a>
-        <a><button id="clear" class="btn btn-lg btn-danger"><span class="fa fa-minus-circle"></span> Clear Tables</button></a>
+        <a><button id="clear" class="btn btn-lg btn-danger"><span class="fa fa-minus-circle"></span> Clear
+            Tables</button></a>
       </div>
     </div>
 
@@ -59,7 +61,8 @@
     <footer class="footer mt-4">
       <div class="container">
         <p>Control Panel</p>
-        <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API
+        <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a
+            href="/api/waitlist">API
             Wait List</a>
       </div>
     </footer>
@@ -77,9 +80,10 @@
   // It's also very similar to the NYT search application. In fact, I copied a ton of code from there.
 
   function runTableQuery() {
+    $("#tableList").empty();
     // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
     $.ajax({ url: "/api/tables", method: "GET" })
-      .then(function(tableData) {
+      .then(function (tableData) {
 
         // Here we then log the tableData to console, where it will show up as an object.
         console.log(tableData);
@@ -100,7 +104,8 @@
             $("<h2>").text("ID: " + tableData[i].id),
             $("<h2>").text("Name: " + tableData[i].name),
             $("<h2>").text("Email: " + tableData[i].email),
-            $("<h2>").text("Phone: " + tableData[i].phoneNumber)
+            $("<h2>").text("Phone: " + tableData[i].phoneNumber),
+            $(`<button class="btn btn-lg btn-danger delete" data-id ="${tableData[i].id}">Remove ${tableData[i].name}</button>`)
           );
 
           tableList.append(listItem);
@@ -109,10 +114,10 @@
   }
 
   function runWaitListQuery() {
-
+    $("#waitList").empty();
     // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
     $.ajax({ url: "/api/waitlist", method: "GET" })
-      .then(function(waitData) {
+      .then(function (waitData) {
 
         // Here we then log the waitlistData to console, where it will show up as an object.
         console.log(waitData);
@@ -133,7 +138,9 @@
             $("<h2>").text("ID: " + waitData[i].id),
             $("<h2>").text("Name: " + waitData[i].name),
             $("<h2>").text("Email: " + waitData[i].email),
-            $("<h2>").text("Phone: " + waitData[i].phoneNumber)
+            $("<h2>").text("Phone: " + waitData[i].phoneNumber),
+            $(`<button class="btn btn-lg btn-danger delete" data-id ="${waitData[i].id}">Remove ${waitData[i].name}</button>`),
+            $(`<button class="btn btn-lg btn-primary seat" data-id ="${waitData[i].id}">Seat ${waitData[i].name}</button>`)
           );
 
           waitList.append(listItem);
@@ -146,7 +153,7 @@
     alert("Clearing...");
 
     // Clear the tables on the server and then empty the elements on the client
-    $.ajax({ url: "/api/clear", method: "POST" }).then(function() {
+    $.ajax({ url: "/api/clear", method: "POST" }).then(function () {
       $("#waitList").empty();
       $("#tableList").empty();
     });
@@ -154,6 +161,34 @@
 
   $("#clear").on("click", clearTable);
 
+
+  function deleteReservation(id) {
+    alert("Deleting....");
+
+    $.ajax({ url: `/api/tables/${id}`, method: "DELETE" }).then(function () {
+      runTableQuery();
+      runWaitListQuery();
+
+    })
+  }
+
+  $(document).on("click", ".delete", function(event) {
+    deleteReservation($(this).attr("data-id"))
+  })
+
+  function seatReservation(id) {
+    alert("Seating....");
+
+    $.ajax({ url: `/api/seat/${id}`, method: "PUT" }).then(function () {
+      runTableQuery();
+      runWaitListQuery();
+
+    })
+  }
+
+  $(document).on("click", ".seat", function(event) {
+    seatReservation($(this).attr("data-id"))
+  })
 
   // Run Queries!
   // ==========================================

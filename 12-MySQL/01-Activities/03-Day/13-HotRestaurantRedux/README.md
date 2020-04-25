@@ -12,7 +12,7 @@
     - A column called name to hold the name
     - A column called email to hold the email
     - A column called phoneNumber to hold the Phone Number
-    - A column called waitList that holds true/false
+    - A column called seated that holds true/false, to see if they are on the waitlist
     - An ID column named id 
 
 * Next, generate a seed script for the above, with at least two rows for testing!
@@ -28,6 +28,8 @@
 
     - Change over all that JSON stuff!
     - Reimplement all routes using our database, not a JSON!
+    - For our post that sends a table to the actual tables/waitlist, we want to: 
+        - Use the SQL COUNT functionality to see if we have 5 or more tables with 'seated = false'
 
 * Test
 
