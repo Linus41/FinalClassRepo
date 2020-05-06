@@ -4,40 +4,32 @@
 
 // Dependencies
 // =============================================================
-const db = require("../models");
+var connection = require("../config/connection.js");
 
 // Routes
 // =============================================================
 module.exports = function(app) {
-
   // Get all chirps
   app.get("/api/all", function(req, res) {
+    var dbQuery = "SELECT * FROM chirps";
 
-    // Finding all Chirps, and then returning them to the user as JSON.
-    // Sequelize queries are asynchronous, which helps with perceived speed.
-    // If we want something to be guaranteed to happen after the query, we'll use
-    // the .then function
-    db.Chirp.findAll({}).then(function(results) {
-      // results are available to us inside the .then
-      res.json(results);
+    connection.query(dbQuery, function(err, result) {
+      if (err) throw err;
+      res.json(result);
     });
-
   });
 
   // Add a chirp
   app.post("/api/new", function(req, res) {
-
     console.log("Chirp Data:");
     console.log(req.body);
 
-    db.Chirp.create({
-      author: req.body.author,
-      body: req.body.body
-    }).then(function(results) {
-      // `results` here would be the newly created chirp
+    var dbQuery = "INSERT INTO chirps (author, body, created_at) VALUES (?,?,?)";
+
+    connection.query(dbQuery, [req.body.author, req.body.body, req.body.created_at], function(err, result) {
+      if (err) throw err;
+      console.log("Chirp Successfully Saved!");
       res.end();
     });
-
   });
-
 };
