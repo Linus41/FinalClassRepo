@@ -1,5 +1,3 @@
-* Folder: `07-ORM-To-Sequelize/Unsolved`
-
 * INSTRUCTIONS:
 
   1) Create a new local MYSQL database called 'todolist', but don't create any tables.

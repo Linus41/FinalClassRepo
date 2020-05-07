@@ -1,5 +1,3 @@
-* Folder: `08-Sequelize-Create-Read/Unsolved`
-
 * INSTRUCTIONS:
 
   1) Open the folder and run `npm install`.
@@ -16,7 +14,7 @@
 
   7) Hint: We can access the Todo model here with "db.Todo"
 
-  If you get stuck or finish early, check out the Sequelize Star Wars solution from last class, or try and see if you and your partner can make sense of Sequelize's docs for the findAll and create methods
+  If you get stuck or finish early, check out the Sequelize Star Wars solution from last class, or try and see if you can make sense of Sequelize's docs for the findAll and create methods
 
   <http://docs.sequelizejs.com/class/lib/model.js~Model.html#static-method-findAll>
 

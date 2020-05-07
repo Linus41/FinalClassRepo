@@ -1,5 +1,3 @@
-* **Folder:** `14-Post-Author-Joins/Unsolved`
-
 * **INSTRUCTIONS:**
 
   The goal of this exercise is to modify our find queries in both post-api-routes.js and author-api-routes.js to use Sequelize's "include" option. We can use "include" to say that we want to return associated data.

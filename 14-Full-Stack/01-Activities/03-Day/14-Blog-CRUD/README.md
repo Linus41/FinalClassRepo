@@ -1,5 +1,3 @@
-* **Folder**: `12-Blog-CRUD/Unsolved`
-
 * **INSTRUCTIONS**:
 
   The goal of this exercise is to add Sequelize CRUD methods inside each route specified in the comments in the api-routes.js file.

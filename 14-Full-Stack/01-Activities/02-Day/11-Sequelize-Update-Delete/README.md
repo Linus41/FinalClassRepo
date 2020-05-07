@@ -1,5 +1,3 @@
-* Folder: `09-Sequelize-Update-Delete/Unsolved`.
-
 * INSTRUCTIONS:
 
   1) Open the Unsolved folder

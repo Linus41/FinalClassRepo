@@ -1,5 +1,3 @@
-* Folder: `10-Sequelize-Validations/Unsolved`
-
 * INSTRUCTIONS:
 
   1) Open the folder slacked out to you.

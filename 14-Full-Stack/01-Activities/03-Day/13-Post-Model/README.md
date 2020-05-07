@@ -1,5 +1,3 @@
-* **Folder**: `11-Post-Model/Unsolved`
-
 * **INSTRUCTIONS**:
 
   The goal of this exercise is to create a Post model using Sequelize.

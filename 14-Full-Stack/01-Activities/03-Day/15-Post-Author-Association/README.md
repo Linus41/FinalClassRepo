@@ -1,5 +1,3 @@
-* **Folder:** `13-Post-Author-Association/Unsolved`
-
 * **INSTRUCTIONS:**
 
   The goal of this exercise is to modify the Post and Author models so that they are associated with eachother.
