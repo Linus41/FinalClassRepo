@@ -260,7 +260,7 @@ The structure of the application, as produced, is replicated below, with folders
 
 ### I want to add a model.
 
-Add the model to the ```models``` folder. The 
+Add the model to the ```models``` folder. The ```index.js``` file generated from the sequelize-cli will pick it up. 
 
 ### I want to add an API controller to expose data
 
