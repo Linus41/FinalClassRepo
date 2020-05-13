@@ -292,6 +292,7 @@ Please follow the configuration guide supplied in Unit 14. You will need to:
 
 * [Express](https://expressjs.com/) - Express, our web framework
 * [Express Handlebars](https://www.npmjs.com/package/express-handlebars) - Express Handlebars, a handlebars integration for Express, that simplifies a bunch of Express things
+* [Morgan](https://www.npmjs.com/package/morgan) - Morgan, an improved logging library that works nicely with Express. Now, all requests to our server get logged out in the console. 
 * [Sequelize](https://sequelize.org/) - Sequelize, our ORM
 * [Passport](https://www.npmjs.com/package/passport) - Passport is a an authentication middleware for Express that lets us off load a bunch of the fiddly bits of authentication. 
 * [Passport-Local](https://www.npmjs.com/package/passport-local) - Passport is a an authentication middleware for Express that lets us off load a bunch of the fiddly bits of authentication. 
