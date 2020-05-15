@@ -35,7 +35,7 @@ router.post("/", function(req, res) {
  * User - Update
  */
 router.put("/:id", function(req, res) {
-  db.User.findOneAndUpdate({ _id: req.params.id }, req.body)
+  db.User.update(req.body, { where: { id: req.params.id }})
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
 });
@@ -44,8 +44,7 @@ router.put("/:id", function(req, res) {
  * User - Delete
  */
 router.delete("/:id", function(req, res) {
-  db.User.findById({ _id: req.params.id })
-    .then(dbModel => dbModel.remove())
+  db.User.destroy({ where: { id: req.params.id }})
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
 });
