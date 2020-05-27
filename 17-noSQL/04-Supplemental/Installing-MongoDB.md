@@ -43,7 +43,7 @@
 
 6. You’ll also want to add MongoDB’s path to the PATH environment variable, so that you can run it easily from the bash command line.
 
-7. First, locate the directory where you installed MongoDB. This is likely `C:\\Program Files\\MongoDB\\Server\\<version_number>\\bin`. Copy this directory to your clipboard.
+7. First, locate the directory where you installed MongoDB. This is likely `C:\Program Files\MongoDB\Server\<version_number>\bin`. Copy this directory to your clipboard.
 
 8. Then, open up the System menu or Control Card on your machine, usually accessible via the Start menu or Search Bar in Windows operating systems.
 
