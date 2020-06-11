@@ -1,12 +1,12 @@
-# Unit 19 React Homework: Employee Directory
+# Unit 19 React Homework: Budget Tracker
 
 ## Overview
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+For this assignment, you'll create a budget tracker with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
 
 ## User Story
 
-* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+* As a user, I want to be able to view all my expenses so that I have access to them and can see the total of my entered expenses.
 
 ## Business Context
 
@@ -14,13 +14,19 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
 ## Acceptance Criteria
 
-Given a table of random users, when the user loads the page, a table of employees should render. 
+The application should render on a single page:
 
-The user should be able to:
+  * A form to input an expense.
 
-  * Sort the table by at least one category
+  * A table of all expenses.
 
-  * Filter the users by at least one property.
+  * A running total of entered expenses.
+  
+A user should be able to input an expense, consisting of: 
+
+  * A dollar amount
+
+NO BACKEND IS NEEDED
 
 ## Commit Early and Often
 
