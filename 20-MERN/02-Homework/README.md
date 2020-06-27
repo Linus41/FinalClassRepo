@@ -1,133 +1,94 @@
-# Google Books Search
+# Unit 20 React Homework: React Portfolio
 
-### Overview
+Now that you've worked with React and have multiple projects to share, you'll be updating your portfolio and other materials to build toward being employer competitive. Creating a portfolio using React will help set you apart from other developers whose portfolios do not use some of the latest technologies.
 
-In this activity, you'll create a new React-based Google Books Search app. This assignment requires you to create React components, work with helper/util functions, and utilize React lifecycle methods to query and display books based on user searches. You'll also use Node, Express and MongoDB OR MySQL with Sequelize so that users can save books to review or purchase later.
+If you are opting out of career services, this is *still a required assignment*. Part of being a web developer means being a part of a community. Having a place to share your projects is *necessary* if you're applying for jobs, but is still *critical* on your journey as a developer.
 
-### Commits
+## Requirements
 
-Having an active and healthy commit history on GitHub is important for your future job search. It is also extremely important for making sure your work is saved in your repository. If something breaks, committing often ensures you are able to go back to a working version of your code.
+* Updated portfolio featuring 6 total projects
 
-* Committing often is a signal to employers that you are actively working on your code and learning.
+* Use React
 
-  * We use the mantra “commit early and often.”  This means that when you write code that works, add it and commit it!
+* A `Header` component that appears on multiple pages
 
-  * Numerous commits allow you to see how your app is progressing and give you a point to revert to if anything goes wrong.
+* A single `Project` component that will be used multiple times on a single page 
 
-* Be clear and descriptive in your commit messaging.
+* Navigation with React Router, dynamic rendering, or another third part router
 
-  * When writing a commit message, avoid vague messages like "fixed." Be descriptive so that you and anyone else looking at your repository knows what happened with each commit.
+* A `Footer` component that appears on multiple pages
 
-* We would like you to have well over 200 commits by graduation, so commit early and often!
+* Update GitHub profile with pinned repositories featuring those same projects
 
-### Submission on BCS
+## Grading
 
-* **Please submit both the deployed Heroku link to your homework AND the link to the Github Repository!**
+| Requirement    | Weight |
+| -------------- | ------ |
+| Portoflio      | 90%    |
+| GitHub Profile | 10%    |
 
-### Instructions
 
-* This application requires at minimum 2 pages, check out the following mockup images for each page:
+## Instructions
 
-  * [Search](Search.png) - User can search for books via the Google Books API and render them here. User has the option to "View" a book, bringing them to the book on Google Books, or "Save" a book, saving it to the Mongo database.
+  - [Updated Portfolio](#updated-portfolio)
+    - [Design](#design)
+  - [React](#react)
+  - [Updated LinkedIn Profile](#updated-linkedin-profile)
 
-  * [Saved](Saved.png) - Renders all books saved to the database. User has an option to "View" the book, bringing them to the book on Google Books, or "Delete" a book, removing it from the database.
+### Updated Portfolio
 
-1. Start by using the 07-Ins_Mern example as a base for your application.
+Your updated site should still have all of the content it previously had:
 
-2. Add code to connect to a database named `googlebooks`.
+* Your name
 
-3. Create a Book schema.
+* Links to your GitHub profile & LinkedIn page as well as your email address and phone number
 
-4. At a minimum, books should have each of the following fields, either through relational data or through a document:
+* A link to a PDF of your resume with updated projects
 
-* `title` - Title of the book from the Google Books API
+* A list of projects. For each project, make sure you have the following:
 
-* `authors` - The books's author(s) as returned from the Google Books API
+  * Project title
 
-* `description` - The book's description as returned from the Google Books API
+  * Link to the deployed version
 
-* `image` - The Book's thumbnail image as returned from the Google Books API
+  * Link to the GitHub repository
 
-* `link` - The Book's information link as returned from the Google Books API
+  * GIF or screenshot of the deployed application
 
-* I.e., you will want to be able to send something like:
 
-    ```js
-    {
-      authors: ["Suzanne Collins"]
-      description: "Set in a dark vision of the near future, a terrifying reality TV show is taking place. Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. There is only one rule: kill or be killed. When sixteen-year-old Katniss Everdeen steps forward to take her younger sister's place in the games, she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature."
-      image: "http://books.google.com/books/content?id=sazytgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-      link: "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api"
-      title: "The Hunger Games"
-    }
-    ```
+#### Design
 
-5. Create a layout similar to the mockups displayed above. This should be a SPA (Single Page Application) that uses [`react-router-dom`](https://github.com/reactjs/react-router) to navigate, hide and show your React components without changing the route within Express.
+As with the previous portfolio homework, "good" design is subjective. Your site should look
+"polished." Here are a few guidelines on what that means:
 
-* The layout should include at least two React Components for each page `Search` and `Saved`.
+* Mobile-first design
 
-* Feel free to try out alternative CSS framework to Bootstrap.
+* Choose a color palette for your site so it doesn't just look like
+the default bootstrap theme or an unstyled HTML site. You may we
 
-6. Add the following Express routes for your app:
+* Make sure the font size is large enough to read, and that the colors don't cause eye strain.
 
-* `/api/books` (get) - Should return all saved books as JSON.
+* If you want to go above and beyond, try using animations and react component libraries. Note 
+that this will _not_ affect your grade, but it may impact how potentials employers gauge your knowledge.
 
-* `/api/books` (post) - Will be used to save a new book to the database.
+### React
 
-* `/api/books/:id` (delete) - Will be used to delete a book from the database by the id.
+Additionally, this new portfolio should be created using React.
 
-* `*` (get) - Will load your single HTML page in `client/build/index.html`. Make sure you have this _after_ all other routes are defined.
+At a minimum, your portfolio should include the following:
 
-* Deploy your application to Heroku once complete. **You must use Create React App** and current versions of React and React-Router-Dom for this assignment.
+* A `Header` component that appears on multiple pages
 
-- - -
+* A single `Project` component that will be used multiple times on a single page 
 
-### Bonus Live Updates to Saved Books
+* Navigation with React Router, dynamic rendering, or another third part router
 
-* Use React routing and [socket.io](http://socket.io) to create a notification or a component that triggers whenever a user saves an book. Your message should include the title of the saved book.
+* A `Footer` component that appears on multiple pages
 
-  * Say you have multiple browsers open, each one visiting your site. If you save an book in one browser, then all of your browsers should notify you that a new book was saved.
 
-  * [Socket.io NPM package](https://www.npmjs.com/package/socket.io)
+### Updated LinkedIn Profile 
 
-### Reminder: Submission on BCS
-
-* **This assignment must be deployed.** * Please submit both the deployed Heroku link to your homework AND the link to the Github Repository!
+Make sure to update your LinkedIn Profile with the new skills you've acquired since the last time it was updated.
 
 - - -
-
-### Minimum Requirements
-
-Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed. Hosting on Heroku and adding a README.md are required for this homework. In addition, add this homework to your portfolio, more information can be found below.
-
-- - -
-
-### Create a README.md
-
-Add a `README.md` to your repository describing the project. Here are some resources for creating your `README.md`. Here are some resources to help you along the way:
-
-* [About READMEs](https://help.github.com/articles/about-readmes/)
-
-* [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
-
-- - -
-
-### Add To Your Portfolio
-
-After completing the homework please add the piece to your portfolio. Make sure to add a link to your updated portfolio in the comments section of your homework so the TAs can easily ensure you completed this step when they are grading the assignment. To receive an 'A' on any assignment, you must link to it from your portfolio.
-
-- - -
-
-### Hosting on Heroku
-
-Now that we have a backend to our applications, we use Heroku for hosting. Please note that while **Heroku is free**, it will request credit card information if you have more than 5 applications at a time or are adding a database.
-
-Please see [Heroku’s Account Verification Information](https://devcenter.heroku.com/articles/account-verification) for more details.
-
-- - -
-
-### One More Thing
-
-If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
-
-**Good Luck!**
+© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
