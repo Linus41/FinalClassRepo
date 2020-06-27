@@ -249,7 +249,7 @@ You may also need to:
 Please follow the configuration guide supplied in Unit 14. You will need to: 
 
 - Configure a Heroku application
-- Add an instance of JawsDB and add the connection information in ```config/config.json```
+- Add an instance of JawsDB or mLab
 - Pass the config var ```NODE_ENV = production``` in the deployed version. 
 
 ## Built With

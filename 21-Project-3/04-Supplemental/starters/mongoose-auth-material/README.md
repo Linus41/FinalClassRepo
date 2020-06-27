@@ -203,7 +203,7 @@ You may also need to:
 Please follow the configuration guide for MERN or Sequelize apps. You will need to: 
 
 - Configure a Heroku application
-- Add an instance of JawsDB and add the connection information in ```config/config.json```, or use or mLab and let it just work.
+- Add an instance of JawsDB or mLab
 - Pass the config var ```NODE_ENV = production``` in the deployed version. 
 
 ## Built With
