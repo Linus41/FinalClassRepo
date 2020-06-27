@@ -3,6 +3,7 @@ import { Table } from "react-bootstrap";
 
 function PostTable(props) {
     const { posts } = props;
+    
     return (
         <Table>
             <thead>
